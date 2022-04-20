@@ -91,7 +91,7 @@ function Palme(result) {
 }
 
 function Empan(result) {
-    rl.question('Quel est la taille de votre empan romain ? ', (answerEmpan) => {
+    rl.question('Quel est la taille de votre empan ? ', (answerEmpan) => {
         result = (answerEmpan) * InitEmpan
         console.log(`La longueur de l'empan est donc de ${result} centimètres`);
         process.exit(0);
