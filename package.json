@@ -2,5 +2,9 @@
   "name": "JW_Calculs",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cli-color": "^2.0.2",
+    "convert-length": "^1.0.1"
+  }
 }

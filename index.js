@@ -1,9 +1,12 @@
-const readline = require('readline');
+const readline = require('readline')
+const convert = require('convert-length')
+const color = require('cli-color')
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
     prompt: '>'
-});
+})
 
 const InitRoseau = 2.67 //mètres
 const InitGrandRoseau = 3.11 //mètres
@@ -19,8 +22,10 @@ const InitEmpan = 22.2 //centimètres
 function GrandRoseau(result) {
     rl.question('Quel est la taille de votre grand roseau ? ', (answerGrandRoseau) => {
         result = (answerGrandRoseau) * InitGrandRoseau
-        console.log(`La longueur du grand roseau est donc de ${result} mètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'm','cm')
+        console.log(`La longueur du grand roseau est donc de ` + color.green(`${result} mètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        process.exit(0)
     })
 }
 
@@ -28,40 +33,49 @@ function GrandRoseau(result) {
 function Roseau(result) {
     rl.question('Quel est la taille de votre roseau ? ', (answerRoseau) => {
         result = (answerRoseau) * InitRoseau
-        console.log(`La longueur du roseau est donc de ${result} mètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'm','cm')
+        console.log(`La longueur du roseau est donc de ` + color.green(`${result} mètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        process.exit(0)
     })
 }
 
 function Brasse(result) {
     rl.question('Quel est la taille de votre brasse ? ', (answerBrasse) => {
         result = (answerBrasse) * InitBrasse
-        console.log(`La longueur de la brasse est donc de ${result} mètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'm','cm')
+        console.log(`La longueur de la brasse est donc de ` + color.green(`${result} mètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        process.exit(0)
     })
 }
 
 function GrandeCoudee(result) {
     rl.question('Quel est la taille de votre grande coudée ? ', (answerGrandeCoudee) => {
         result = (answerGrandeCoudee) * InitGrandeCoudee
-        console.log(`La longueur de la grande coudée est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur de la grande coudée est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
     })
 }
 
 function Coudee(result) {
     rl.question('Quel est la taille de votre coudée ? ', (answerCoudee) => {
         result = (answerCoudee) * InitCoudee
-        console.log(`La longueur de la coudée est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur de la coudée est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        process.exit(0)
     })
 }
 
 function CoudeeCourte(result) {
     rl.question('Quel est la taille de votre coudée courte ? ', (answerCoudeeCourte) => {
         result = (answerCoudeeCourte) * InitCoudeeCourte
-        console.log(`La longueur de la coudée courte est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur de la coudée courte est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        process.exit(0)
     })
 }
 
@@ -69,32 +83,40 @@ function CoudeeCourte(result) {
 function StadeRomain(result) {
     rl.question('Quel est la taille de votre stade romain ? ', (answerStadeRomain) => {
         result = (answerStadeRomain) * InitStadeRomain
-        console.log(`La longueur du stade romain est donc de ${result} mètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'm','cm')
+        console.log(`La longueur du stade romain est donc de ` + color.green(`${result} mètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        process.exit(0)
     })
 }
 
 function Doigt(result) {
     rl.question('Quel est la taille de votre doigt ? ', (answerDoigt) => {
         result = (answerDoigt) * InitDoigt
-        console.log(`La longueur du doigt est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur du doigt est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        process.exit(0)
     })
 }
 
 function Palme(result) {
     rl.question('Quel est la taille de votre palme ? ', (answerPalme) => {
         result = (answerPalme) * InitPalme
-        console.log(`La longueur de la palme est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur de la palme est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        process.exit(0)
     })
 }
 
 function Empan(result) {
     rl.question('Quel est la taille de votre empan ? ', (answerEmpan) => {
         result = (answerEmpan) * InitEmpan
-        console.log(`La longueur de l'empan est donc de ${result} centimètres`);
-        process.exit(0);
+        resultConverted = convert(result, 'cm','m')
+        console.log(`La longueur de l'empan est donc de ` + color.green(`${result} centimètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        process.exit(0)
     })
 }
 
@@ -135,6 +157,6 @@ rl.question('1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5
 })
 
 rl.on('close', function () {
-    console.log('Bye');
-    process.exit(0);
+    console.log('Bye')
+    process.exit(0)
 })
