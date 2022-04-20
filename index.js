@@ -23,101 +23,161 @@ const InitEmpan = 22.2 //centimètres
 
 function GrandRoseau(result) {
     rl.question('Quel est la taille de votre grand roseau ? ', (answerGrandRoseau) => {
+        if (isNaN(answerGrandRoseau)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerGrandRoseau) * InitGrandRoseau
         resultConverted = convert(result, 'm', 'cm')
         console.log(`La longueur du grand roseau est donc de ` + color.green(`${result} mètres`))
-        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Roseau(result) {
     rl.question('Quel est la taille de votre roseau ? ', (answerRoseau) => {
+        if (isNaN(answerRoseau)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerRoseau) * InitRoseau
         resultConverted = convert(result, 'm', 'cm')
         console.log(`La longueur du roseau est donc de ` + color.green(`${result} mètres`))
-        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Brasse(result) {
     rl.question('Quel est la taille de votre brasse ? ', (answerBrasse) => {
+        if (isNaN(answerBrasse)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerBrasse) * InitBrasse
         resultConverted = convert(result, 'm', 'cm')
         console.log(`La longueur de la brasse est donc de ` + color.green(`${result} mètres`))
-        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function GrandeCoudee(result) {
     rl.question('Quel est la taille de votre grande coudée ? ', (answerGrandeCoudee) => {
+        if (isNaN(answerGrandeCoudee)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerGrandeCoudee) * InitGrandeCoudee
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur de la grande coudée est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Coudee(result) {
     rl.question('Quel est la taille de votre coudée ? ', (answerCoudee) => {
+        if (isNaN(answerCoudee)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerCoudee) * InitCoudee
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur de la coudée est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function CoudeeCourte(result) {
     rl.question('Quel est la taille de votre coudée courte ? ', (answerCoudeeCourte) => {
+        if (isNaN(answerCoudeeCourte)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerCoudeeCourte) * InitCoudeeCourte
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur de la coudée courte est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function StadeRomain(result) {
     rl.question('Quel est la taille de votre stade romain ? ', (answerStadeRomain) => {
+        if (isNaN(answerStadeRomain)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerStadeRomain) * InitStadeRomain
         resultConverted = convert(result, 'm', 'cm')
         console.log(`La longueur du stade romain est donc de ` + color.green(`${result} mètres`))
-        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres`))
+        console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Doigt(result) {
     rl.question('Quel est la taille de votre doigt ? ', (answerDoigt) => {
+        if (isNaN(answerDoigt)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerDoigt) * InitDoigt
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur du doigt est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Palme(result) {
     rl.question('Quel est la taille de votre palme ? ', (answerPalme) => {
+        if (isNaN(answerPalme)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerPalme) * InitPalme
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur de la palme est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
 function Empan(result) {
     rl.question('Quel est la taille de votre empan ? ', (answerEmpan) => {
+        if (isNaN(answerEmpan)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        } else {
         result = (answerEmpan) * InitEmpan
         resultConverted = convert(result, 'cm', 'm')
         console.log(`La longueur de l'empan est donc de ` + color.green(`${result} centimètres`))
-        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres`))
+        console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
         setTimeout(() => {Input()}, 2000);
+        }
     })
 }
 
@@ -125,7 +185,8 @@ function Empan(result) {
 function Input() {
     rl.question(color.cyan('0 - Quitter\n') + '1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5 - Coudée \n6 - Coudée courte \n7 - Stade romain \n8 - Doigt \n9 - Palme \n10 - Empan \n\nRéponse : ', (answerNumber) => {
         if (answerNumber == 0) {
-            process.exit(0)
+            console.log(color.green('Oh dommage, passez une bonne journée !'))
+            setTimeout(() => {process.exit(0)}, 800);
         }
         else if (answerNumber == 1) {
             GrandRoseau()
@@ -163,6 +224,11 @@ function Input() {
             setTimeout(() => {Input()}, 1900);
         }
         else if (answerNumber < 0) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
+            setTimeout(() => {Input()}, 1900);
+        }
+        else if (isNaN()) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => {console.log(color.red('Chargement...\n'))}, 800);
             setTimeout(() => {Input()}, 1900);
