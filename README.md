@@ -17,8 +17,3 @@
 Si tout problème envers le code ou autre, veuillez me contacter sur discord (\_Alane\_#6939)
 
 ### Crée par: \_Alane\_#6939
-
-## Aide ?
-Si tout problème envers le code ou autre, veuillez me contacter sur discord (\_Alane\_#6939)
-
-### Crée par: \_Alane\_#6939
