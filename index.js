@@ -36,6 +36,14 @@ const initOmer = 2.2 //litres
 const initQab = 1.22 //litres
 const initLitre = 1.08 //litres
 
+// Variables : Monnaies grecques
+const initDrachme = 0.002935 //euros
+const initDidrachme = initDrachme * 2 //euros
+const initTetradrachme = initDrachme * 4 //euros
+const initMine = initDrachme * 100 //euros
+const initTalent = initMine * 60 //euros
+const initLivre = initDrachme * 96 //euros
+
 // Fonctions : mesures de longueurs
 function GrandRoseau(result) {
     rl.question('Quel est la taille de votre grand roseau ? ', (answerGrandRoseau) => {
@@ -47,7 +55,7 @@ function GrandRoseau(result) {
             result = (answerGrandRoseau) * initGrandRoseau
             resultConverted = convertLength(result, 'm', 'cm')
             console.log(`La longueur du grand roseau est donc de ` + color.green(`${result} mètres`))
-            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
+            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendrons ` + color.cyan(`${resultConverted} centimètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -63,7 +71,7 @@ function Roseau(result) {
             result = (answerRoseau) * initRoseau
             resultConverted = convertLength(result, 'm', 'cm')
             console.log(`La longueur du roseau est donc de ` + color.green(`${result} mètres`))
-            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
+            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendrons ` + color.cyan(`${resultConverted} centimètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -79,7 +87,7 @@ function Brasse(result) {
             result = (answerBrasse) * initBrasse
             resultConverted = convertLength(result, 'm', 'cm')
             console.log(`La longueur de la brasse est donc de ` + color.green(`${result} mètres`))
-            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
+            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendrons ` + color.cyan(`${resultConverted} centimètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -95,7 +103,7 @@ function GrandeCoudee(result) {
             result = (answerGrandeCoudee) * initGrandeCoudee
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur de la grande coudée est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -111,7 +119,7 @@ function Coudee(result) {
             result = (answerCoudee) * initCoudee
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur de la coudée est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -127,7 +135,7 @@ function CoudeeCourte(result) {
             result = (answerCoudeeCourte) * initCoudeeCourte
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur de la coudée courte est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -143,7 +151,7 @@ function StadeRomain(result) {
             result = (answerStadeRomain) * initStadeRomain
             resultConverted = convertLength(result, 'm', 'cm')
             console.log(`La longueur du stade romain est donc de ` + color.green(`${result} mètres`))
-            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendront ` + color.cyan(`${resultConverted} centimètres\n`))
+            console.log(`Si nous convertissons cette valeur en centimètres, nous obtiendrons ` + color.cyan(`${resultConverted} centimètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -159,7 +167,7 @@ function Doigt(result) {
             result = (answerDoigt) * initDoigt
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur du doigt est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -175,7 +183,7 @@ function Palme(result) {
             result = (answerPalme) * initPalme
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur de la palme est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -191,7 +199,7 @@ function Empan(result) {
             result = (answerEmpan) * initEmpan
             resultConverted = convertLength(result, 'cm', 'm')
             console.log(`La longueur de l'empan est donc de ` + color.green(`${result} centimètres`))
-            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendront ` + color.cyan(`${resultConverted} mètres\n`))
+            console.log(`Si nous convertissons cette valeur en mètres, nous obtiendrons ` + color.cyan(`${resultConverted} mètres\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -199,7 +207,7 @@ function Empan(result) {
 
 // Fonctions : mesures de capacités pour les liquides
 function Kor(result) {
-    rl.question('Quel est le litre de votre Kor ? ', (answerKor) => {
+    rl.question('Quelle est la valeur de votre Kor ? ', (answerKor) => {
         if (isNaN(answerKor)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -207,14 +215,14 @@ function Kor(result) {
         } else {
             result = (answerKor) * initKor
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Bath(result) {
-    rl.question('Quel est le litre de votre Bath ? ', (answerBath) => {
+    rl.question('Quelle est la valeur de votre Bath ? ', (answerBath) => {
         if (isNaN(answerBath)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -222,14 +230,14 @@ function Bath(result) {
         } else {
             result = (answerBath) * initBath
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Hin(result) {
-    rl.question('Quel est le litre de votre Hin ? ', (answerHin) => {
+    rl.question('Quelle est la valeur de votre Hin ? ', (answerHin) => {
         if (isNaN(answerHin)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -237,14 +245,14 @@ function Hin(result) {
         } else {
             result = (answerHin) * initHin
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Log(result) {
-    rl.question('Quel est le litre de votre Log ? ', (answerLog) => {
+    rl.question('Quelle est la valeur de votre Log ? ', (answerLog) => {
         if (isNaN(answerLog)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -252,7 +260,7 @@ function Log(result) {
         } else {
             result = (answerLog) * initLog
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
@@ -260,7 +268,7 @@ function Log(result) {
 
 // Fonctions : mesures de capacités pour les matières sèches
 function Homer(result) {
-    rl.question('Quel est le litre de votre Homer ? ', (answerHomer) => {
+    rl.question('Quelle est la valeur de votre Homer ? ', (answerHomer) => {
         if (isNaN(answerHomer)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -268,14 +276,14 @@ function Homer(result) {
         } else {
             result = (answerHomer) * initHomer
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Epha(result) {
-    rl.question('Quel est le litre de votre Epha ? ', (answerEpha) => {
+    rl.question('Quelle est la valeur de votre Epha ? ', (answerEpha) => {
         if (isNaN(answerEpha)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -283,14 +291,14 @@ function Epha(result) {
         } else {
             result = (answerEpha) * initEpha
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Sea(result) {
-    rl.question('Quel est le litre de votre Sea ? ', (answerSea) => {
+    rl.question('Quelle est la valeur de votre Sea ? ', (answerSea) => {
         if (isNaN(answerSea)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -298,14 +306,14 @@ function Sea(result) {
         } else {
             result = (answerSea) * initSea
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Omer(result) {
-    rl.question('Quel est le litre de votre Omer ? ', (answerOmer) => {
+    rl.question('Quelle est la valeur de votre Omer ? ', (answerOmer) => {
         if (isNaN(answerOmer)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -313,14 +321,14 @@ function Omer(result) {
         } else {
             result = (answerOmer) * initOmer
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Qab(result) {
-    rl.question('Quel est le litre de votre Qab ? ', (answerQab) => {
+    rl.question('Quelle est la valeur de votre Qab ? ', (answerQab) => {
         if (isNaN(answerQab)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -328,14 +336,14 @@ function Qab(result) {
         } else {
             result = (answerQab) * initQab
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
 function Litre(result) {
-    rl.question('Quel est le litre de votre Litre ? ', (answerLitre) => {
+    rl.question('Quelle est la valeur de votre Litre ? ', (answerLitre) => {
         if (isNaN(answerLitre)) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
             setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
@@ -343,20 +351,102 @@ function Litre(result) {
         } else {
             result = (answerLitre) * initLitre
             resultConverted = convertUnits(result).from('l').to('ml')
-            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendront ` + color.cyan(`${resultConverted} ml\n`))
+            console.log(`Si nous convertissons cette valeur en millilitres, nous obtiendrons ` + color.cyan(`${resultConverted} ml\n`))
             setTimeout(() => { Input() }, 2000);
         }
     })
 }
 
+// Fonctions : Monnaies grecques
+function Drachme(result) {
+    rl.question('Quelle est la valeur de votre Drachme ? ', (answerDrachme) => {
+        if (isNaN(answerDrachme)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initDrachme) * answerDrachme
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
 
+function Didrachme(result) {
+    rl.question('Quelle est la valeur de votre Didrachme ? ', (answerDidrachme) => {
+        if (isNaN(answerDidrachme)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initDidrachme) * answerDidrachme
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
 
+function Tetradrachme(result) {
+    rl.question('Quelle est la valeur de votre Tetradrachme ? ', (answerTetradrachme) => {
+        if (isNaN(answerTetradrachme)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initTetradrachme) * answerTetradrachme
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Mine(result) {
+    rl.question('Quelle est la valeur de votre Mine ? ', (answerMine) => {
+        if (isNaN(answerMine)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initMine) * answerMine
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Talent(result) {
+    rl.question('Quelle est la valeur de votre Talent ? ', (answerTalent) => {
+        if (isNaN(answerTalent)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initTalent) * answerTalent
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Livre(result) {
+    rl.question('Quelle est la valeur de votre Livre ? ', (answerLivre) => {
+        if (isNaN(answerLivre)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initLivre) * answerLivre
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
 
 // Input
 function Input() {
-    rl.question(color.cyan('0 - Quitter\n') + '---------Longueurs---------\n1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5 - Coudée \n6 - Coudée courte \n7 - Stade romain \n8 - Doigt \n9 - Palme \n10 - Empan\n---------Litres pour liquides---------\n11 - Kor \n12 - Bath \n13 - Hin \n14 - Log\n---------Litres pour matières sèches---------\n15 - Homer \n16 - Epha \n17 - Sea \n18 - Omer \n19 - Qab \n20 - Litre \n\nRéponse : ', (answerNumber) => {
+    rl.question(color.cyan('0 - Quitter\n') + '---------Longueurs---------\n1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5 - Coudée \n6 - Coudée courte \n7 - Stade romain \n8 - Doigt \n9 - Palme \n10 - Empan\n---------Litres pour liquides---------\n11 - Kor \n12 - Bath \n13 - Hin \n14 - Log\n---------Litres pour matières sèches---------\n15 - Homer \n16 - Epha \n17 - Sea \n18 - Omer \n19 - Qab \n20 - Litre\n---------Monnaies Grecques---------\n21 - Drachme \n22 - Didrachme \n23 - Tétradrachme \n24 - Mine \n25 - Talent  \n26 - Livre \n\nRéponse : ', (answerNumber) => {
         if (answerNumber == 0) {
-            console.log(color.green('Oh dommage, passez une bonne journée !'))
+            console.log(color.green('Passez une bonne journée !'))
             setTimeout(() => { process.exit(0) }, 800);
         }
         else if (answerNumber == 1) {
@@ -400,7 +490,7 @@ function Input() {
         }
         else if (answerNumber == 14) {
             Log()
-        } 
+        }
         else if (answerNumber == 15) {
             Homer()
         }
@@ -410,7 +500,7 @@ function Input() {
         else if (answerNumber == 17) {
             Sea()
         }
-        else if (answerNumber == 18) { 
+        else if (answerNumber == 18) {
             Omer()
         }
         else if (answerNumber == 19) {
@@ -418,6 +508,24 @@ function Input() {
         }
         else if (answerNumber == 20) {
             Litre()
+        }
+        else if (answerNumber == 21) {
+            Drachme()
+        }
+        else if (answerNumber == 22) {
+            Didrachme()
+        }
+        else if (answerNumber == 23) {
+            Tetradrachme()
+        }
+        else if (answerNumber == 24) {
+            Mine()
+        }
+        else if (answerNumber == 25) {
+            Talent()
+        }
+        else if (answerNumber == 26) {
+            Livre()
         }
         else if (answerNumber > 10) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
