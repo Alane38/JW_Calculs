@@ -44,6 +44,14 @@ const initMine = initDrachme * 100 //euros
 const initTalent = initMine * 60 //euros
 const initLivre = initDrachme * 96 //euros
 
+// Variables : Monnaies hébraïques
+const initSicle = initMine / 50 //euros
+const initBeqa = initSicle / 2 //euros
+const initGuera = initBeqa / 10 //euros
+const initPim = (initSicle / 4) * 2 //euros
+// const initDarique = ? //euros
+
+
 // Fonctions : mesures de longueurs
 function GrandRoseau(result) {
     rl.question('Quel est la taille de votre grand roseau ? ', (answerGrandRoseau) => {
@@ -442,9 +450,66 @@ function Livre(result) {
     })
 }
 
+// Fonctions : Monnaies hébraiques
+function Guera(result) {
+    rl.question('Quelle est la valeur de votre Guera ? ', (answerGuera) => {
+        if (isNaN(answerGuera)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initGuera) * answerGuera
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Beqa(result) {
+    rl.question('Quelle est la valeur de votre Beqa ? ', (answerBeqa) => {
+        if (isNaN(answerBeqa)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initBeqa) * answerBeqa
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Pim(result) {
+    rl.question('Quelle est la valeur de votre Pim ? ', (answerPim) => {
+        if (isNaN(answerPim)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initPim) * answerPim
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
+function Sicle(result) {
+    rl.question('Quelle est la valeur de votre Sicle ? ', (answerSicle) => {
+        if (isNaN(answerSicle)) {
+            console.log(color.redBright('Veuillez rentrer une valeur valide !'))
+            setTimeout(() => { console.log(color.red('Chargement...\n')) }, 800);
+            setTimeout(() => { Input() }, 1900);
+        } else {
+            result = (initSicle) * answerSicle
+            console.log(`Si nous convertissons cette valeur en euros, nous obtiendrons ` + color.cyan(`${result} €\n`))
+            setTimeout(() => { Input() }, 2000);
+        }
+    })
+}
+
 // Input
 function Input() {
-    rl.question(color.cyan('0 - Quitter\n') + '---------Longueurs---------\n1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5 - Coudée \n6 - Coudée courte \n7 - Stade romain \n8 - Doigt \n9 - Palme \n10 - Empan\n---------Litres pour liquides---------\n11 - Kor \n12 - Bath \n13 - Hin \n14 - Log\n---------Litres pour matières sèches---------\n15 - Homer \n16 - Epha \n17 - Sea \n18 - Omer \n19 - Qab \n20 - Litre\n---------Monnaies Grecques---------\n21 - Drachme \n22 - Didrachme \n23 - Tétradrachme \n24 - Mine \n25 - Talent  \n26 - Livre \n\nRéponse : ', (answerNumber) => {
+    rl.question(color.cyan('0 - Quitter\n') + '---------Longueurs---------\n1 - Grand Roseau \n2 - Roseau \n3 - Brasse \n4 - Grande coudée \n5 - Coudée \n6 - Coudée courte \n7 - Stade romain \n8 - Doigt \n9 - Palme \n10 - Empan\n---------Litres pour liquides---------\n11 - Kor \n12 - Bath \n13 - Hin \n14 - Log\n---------Litres pour matières sèches---------\n15 - Homer \n16 - Epha \n17 - Sea \n18 - Omer \n19 - Qab \n20 - Litre\n---------Monnaies Grecques---------\n21 - Drachme \n22 - Didrachme \n23 - Tétradrachme \n24 - Mine \n25 - Talent  \n26 - Livre\n---------Monnaies Hébraïques---------\n27 - Guera \n28 - Beqa \n29 - Pim \n30 - Sicle  \n\nRéponse : ', (answerNumber) => {
         if (answerNumber == 0) {
             console.log(color.green('Passez une bonne journée !'))
             setTimeout(() => { process.exit(0) }, 800);
@@ -526,6 +591,18 @@ function Input() {
         }
         else if (answerNumber == 26) {
             Livre()
+        }
+        else if (answerNumber == 27) {
+            Guera()
+        }
+        else if (answerNumber == 28) {
+            Beqa()
+        }
+        else if (answerNumber == 29) {
+            Pim()
+        }
+        else if (answerNumber == 30) {
+            Sicle()
         }
         else if (answerNumber > 10) {
             console.log(color.redBright('Veuillez rentrer une valeur valide !'))
